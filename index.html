@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>David and Anna's Wedding Website</title>
+        <meta name="description" content="Everything you need to know about our wedding!">
+        <meta name="author" content="David Doria">
+
+        <meta property="og:title" content="David and Anna's Wedding Website">
+        <meta property="og:type" content="Website">
+        <meta property="og:url" content="">
+        <meta property="og:description" content="Everything you need to know about our wedding!">
+        <meta property="og:image" content="">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="res/Favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="res/Favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="res/Favicon/favicon-16x16.png">
+        <link rel="manifest" href="res/Favicon/site.webmanifest">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style/global.css">
+    </head>
+
+    <body>
+        <!-- The sidebar -->
+        <div id="sidebar" class="sidebar" onmouseover="openNavigation()" onmouseout="closeNavigation()">
+            <a href="#home_title">
+                <img class="icon" src="res/Sidebar Icons/home.svg" height="24px" width="24px"/>
+                Home
+            </a>
+            <a href="#general_information_title">
+                <img class="icon" src="res/Sidebar Icons/information.svg" height="24px" width="24px"/>
+                General Information
+            </a>
+            <a href="#registry_title">
+                <img class="icon" src="res/Sidebar Icons/registry.svg" height="24px" width="24px"/>
+                Registry
+            </a>
+            <a href="#rsvp_title">
+                <img class="icon" src="res/Sidebar Icons/invitations.svg" height="24px" width="24px"/>
+                Invitations
+            </a>
+            <a href="#gallery_title">
+                <img class="icon" src="res/Sidebar Icons/gallery.svg" height="24px" width="24px"/>
+                Gallery
+            </a>
+            <a href="#about_us">
+                <img class="icon" src="res/Sidebar Icons/about.svg" height="24px" width="24px"/>
+                About Us
+            </a>
+        </div>
+
+        <div id="content" class="content">
+            <!-- Home -->
+            <h1 id="home_title">Home</h1>
+                <p>Welcome to our wedding website! We're very excited for you to spend this special day with us. Here, we hope you can find all of the
+                    information for any questions you may have relating to our wedding and reception. In addition, we have a photo gallery which we hope
+                    we can fill with pictures of all of us together, an RSVP form if you would like to receive an invitation or attend, and our official
+                    story. Thank you again for visiting our website!
+                </p>
+
+            <!-- General Information -->
+            <h1 id="general_information_title">General Information</h1>
+                <h2 id="date_time">Date and Time</h2>
+                    <p>Rexburg Idaho Temple 750 S 2nd E, Rexburg, ID 83440 10am</p>
+                    <p>The Avenues Wedding and Event Center 859 S Yellowstone Hwy, Rexburg, ID 83440 11am-3pm</p>
+                <h2 id="food">Food</h2>
+                    <p>free</p>
+                <h2 id="dress">Dress</h2>
+                    <p>Semi formal</p>
+
+            <!-- Registry -->
+            <h1 id="registry_title">Registry</h1>
+                <p>https://www.amazon.com/wedding/share/anna-david-2022</p>
+
+            <!-- RSVP -->
+            <h1 id="rsvp_title">Invitations</h1>
+                <p> Insert Form Here</p>
+
+            <!-- Gallery -->
+            <h1 id="gallery_title">Gallery</h1>
+                <div class="container" id="gallery">
+                    <!-- Actual Pictures -->
+                    <div class="slide">
+                        <div class="numberText">1/6</div>
+                        <img src="res\images\IMG_001.jpg" id="gallery_image">
+                    </div>
+                    <div class="slide">
+                        <div class="numberText">2/6</div>
+                        <img src="res\images\IMG_002.jpg" id="gallery_image">
+                    </div>
+                    <div class="slide">
+                        <div class="numberText">3/6</div>
+                        <img src="res\images\IMG_003.jpg" id="gallery_image">
+                    </div>
+                    <div class="slide">
+                        <div class="numberText">4/6</div>
+                        <img src="res\images\IMG_004.jpg" id="gallery_image">
+                    </div> 
+                    <div class="slide">
+                        <div class="numberText">5/6</div>
+                        <img src="res\images\IMG_005.jpg" id="gallery_image">
+                    </div> 
+                    <div class="slide">
+                        <div class="numberText">6/6</div>
+                        <img src="res\images\IMG_006.jpg" id="gallery_image">
+                    </div> 
+
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="changeSlides(-1)"></a>
+                    <a class="next" onclick="changeSlides(1)"></a>
+
+                    <!-- Image Text -->
+                    <div class="caption_container">
+                        <p id="caption"></p>
+                    </div>
+
+                    <!-- Thumbnails -->
+                    <div class="row">
+                        <div class="column">
+                            <img class="cursor demo" src="res\images\IMG_001.jpg" onclick="selectSlide(1)" alt="Happy after church">
+                        </div>
+                        <div class="column">
+                            <img class="cursor demo" src="res\images\IMG_002.jpg" onclick="selectSlide(2)" alt="Memorial day drive through the woods">
+                        </div>
+                        <div class="column">
+                            <img class="cursor demo" src="res\images\IMG_003.jpg" onclick="selectSlide(3)" alt="Anna's Birthday masquarade party">
+                        </div>
+                        <div class="column">
+                            <img class="cursor demo" src="res\images\IMG_004.jpg" onclick="selectSlide(4)" alt="Refreshing day at Rigby Lake">
+                        </div>
+                        <div class="column">
+                            <img class="cursor demo" src="res\images\IMG_005.jpg" onclick="selectSlide(5)" alt="Borrowman family reunion at Myrtle Beach, SC">
+                        </div>
+                        <div class="column">
+                            <img class="cursor demo" src="res\images\IMG_006.jpg" onclick="selectSlide(6)" alt="Fun day at Universal Studios">
+                        </div>
+                    </div>
+                </div>
+
+            <!-- About Us -->
+            <h1 id="about_us">About Us</h1>
+                <h2 id="davids_bio">David's Story according to Anna</h2>
+                    <p>
+
+                    </p>
+                <h2 id="annas_bio">Anna's Story according to David</h2>
+                    <p>
+
+                    </p>
+                <h2 id="our_story">Our Story</h2>
+                    <p>
+                        We met on either January 21st or 22nd, 2021, we're not sure, at our the first Family Home Evening activity of the winter semester. 
+                        We we were acquaintences throughout the semester, but didn't start to become friends until spring break, 3 months later. Towards
+                        the end of the semester we both caught Covid-19 and ended up staying in Rexburg for spring break, much to Anna's displeasure and
+                        David's indifference. 
+                    </p>
+                    <p>
+                        A couple days into Spring Break (after our quarantine) we were both invited by friends to hike R Mountain. We didn't know it at
+                        the time, but a year from then we would be getting married. On the way back, someone declared that they wanted nachos, and David,
+                        not knowing how to make nachos, volunteered to make nachos. The rest of spring break, we spent together with our friends, eating
+                        pizza and papusas, and putting make up on each other.
+                    </p>
+                    <p>
+                        The following sunday, Anna and another friend decided to make feijoada, the national dish of Brazil, for everyone. Our friend was
+                        not able to help, so David helped Anna cook the food, and thats where our relationship really started. Later that day, we swapped
+                        Instagrams, and started sending each other memes. Later that day, David asked Anna out for ice cream! Ice cream turned into dinner
+                        at Millhollow, and dinner turned into doing homework together. Since then, we've spent pretty much every day together. Even while
+                        living across the country from each other, we've managed to call, text, play games and video chat with each other every day. 
+                    </p>
+                    <p>
+                        We've come a long way from where we were a year ago, and we're really excited to get married and start our lives together! Thank 
+                        you for sharing this day with us!
+                    </p>
+
+        </div>
+        <script type="text/javascript" src="./scripts/gallery.js"></script>
+        <script type="text/javascript" src="./scripts/navigation.js"></script>
+    </body>
+</html>

@@ -1,0 +1,208 @@
+/* CONTENT */
+body {
+  padding-bottom: 50px;
+}
+
+body .content {
+  font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif;
+  margin-left: 60px;
+  padding: 1px 16px;
+  height: 1000px;
+  color: #141414;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+h1 {
+  color: #113694;
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  color: #113694;
+  font-family: Georgia;
+}
+
+::-moz-selection {
+  color: #fffff0;
+  background: #650015;
+}
+
+::selection {
+  color: #fffff0;
+  background: #650015;
+}
+
+@media screen and (max-width: 700px) {
+  .body .content {
+    margin-left: 0;
+    top: 66px;
+    height: none;
+    position: relative;
+  }
+}
+
+/* SIDEBAR */
+/* Base CSS from https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp 
+and https://medium.com/@9cv9official/create-a-beautiful-hover-triggered-expandable-sidebar-with-simple-html-css-and-javascript-9f5f80a908d1*/
+/* The side navigation menu */
+.sidebar {
+  background-color: #650015;
+  height: 100%;
+  width: 60px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow-x: hidden;
+  padding-top: 60px;
+  white-space: nowrap;
+  /* Sidebar links */
+}
+
+.sidebar a {
+  color: #fffff0;
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar a:hover:not(.topnavIcon) {
+  color: #141414;
+  background-color: #dcdcdc;
+}
+
+.sidebar a .icon {
+  vertical-align: middle;
+  margin-right: 30px;
+}
+
+.sidebar a .topnavIcon {
+  display: none;
+}
+
+/* Screens less than 700px wide */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    overflow: hidden;
+    height: 66px;
+    width: 100%;
+    position: absolute;
+    overflow-y: hidden;
+    z-index: none;
+    top: none;
+    left: none;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    overflow-x: none;
+    padding-top: 7.5px;
+    white-space: none;
+  }
+  .sidebar .a {
+    float: left;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    height: 50px;
+  }
+  .sidebar .a:hover {
+    background-color: #650015;
+  }
+  .sidebar .a .topnavIcon {
+    float: right;
+    display: block;
+  }
+}
+
+/* GALLERY */
+/* From https://www.w3schools.com/css/css_image_gallery.asp */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+}
+
+.container .slide {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+.container #gallery_image {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
+.container .cursor {
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+}
+
+.container .prev, .container .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+}
+
+.container .prev :hover, .container .next :hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.container .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.container .numberText {
+  color: f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.container .caption_container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.container .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container .column {
+  float: left;
+  width: 16.66%;
+}
+
+.container .demo {
+  opacity: 0.7;
+}
+
+.container .active,
+.container .demo:hover {
+  opacity: 1;
+}
+/*# sourceMappingURL=global.css.map */

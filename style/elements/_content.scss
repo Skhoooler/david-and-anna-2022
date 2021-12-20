@@ -1,0 +1,38 @@
+@import "_variables.scss";
+
+body {
+    padding-bottom: 50px;
+    .content {
+        font-family: $mainText;
+        margin-left: 60px;
+        padding: 1px 16px;
+        height: 1000px;
+        color: $black;
+        transition: 0.5s;
+    }
+}
+h1 {
+    color: $navyFont;
+    font-family: $headings1;
+}
+h2 {
+    color: $navyFont;
+    font-family: $headings2;
+}
+
+::selection {
+    color: $white;
+    background: $burgandy;
+}
+
+@media screen and (max-width: 700px) {
+    .body {
+        .content {
+            margin-left: 0;
+            top: 66px;
+            height: none;
+
+            position: relative;
+        }
+    }
+}

@@ -1,0 +1,81 @@
+/* Base CSS from https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp 
+and https://medium.com/@9cv9official/create-a-beautiful-hover-triggered-expandable-sidebar-with-simple-html-css-and-javascript-9f5f80a908d1*/
+@import "_variables.scss";
+
+/* The side navigation menu */
+.sidebar {
+    background-color: $burgandy;
+
+    height: 100%;
+    width: 60px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    overflow-x: hidden;
+    padding-top: 60px;
+    white-space: nowrap;
+
+    /* Sidebar links */
+    a {
+        color: $white;
+
+        display: block;
+        padding: 16px;
+        text-decoration: none;
+
+        &:hover:not(.topnavIcon) {
+            color: $black;
+            background-color: $hover;
+        }
+
+        .icon {
+            vertical-align: middle;
+            margin-right: 30px;
+        }
+
+        .topnavIcon {
+            display: none;
+        }
+    }
+}
+/* Screens less than 700px wide */
+@media screen and (max-width: 700px) {
+    .sidebar {
+        overflow: hidden;
+        
+        height: 66px;
+        width: 100%;
+        position: absolute;
+        overflow-y: hidden;
+    
+        z-index: none;
+        top: none;
+        left: none;
+        transition: 0.5s;
+        overflow-x: none;
+        padding-top: 7.5px;
+        white-space: none;
+
+        .a {
+            float: left;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            height: 50px;
+
+            &:hover{
+                background-color: $burgandy;
+            }
+            .topnavIcon {
+                float: right;
+                display: block;
+            }
+        }
+    
+        // a:not(:first-child) {
+        //     display: none;
+        // }
+    }
+}
